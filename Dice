@@ -9,14 +9,19 @@ public Dice(int sides){
 }
 
 public String getResult(){
+	if(sides==2||sides==4||sides==6)
 	return this.result;
+	return "Dice with "+sides+" sides not possible";
 }
 
 public void roll(){
 	
-	Random random = new Random(); 
-	int result = random.nextInt(sides)+1;
-	this.result = getSide(result);
+	
+		Random random = new Random(); 
+		int result = random.nextInt(sides)+1;
+		this.result = getSide(result);
+	
+	
 	
 }
 
